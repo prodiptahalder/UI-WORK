@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+      <!-- slick slider -->
+  <link rel="stylesheet" href="./slick/slick.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        tr:hover{
+            background: linear-gradient(45deg,#b3d3fa,transparent);
+            /* color: white; */
+        }
+        th,td{
+            border-bottom: 1px solid #1273EB;
+        }
+        table{
+            border-spacing: 0;
+        }
+        .slick-arrow{
+            background: transparent;
+            border: none;
+            position: absolute;
+            top: 50%;
+            z-index: 2;
+        }
+        .prevArrow{
+            left: 5px;
+        }
+        .prevArrow:active{
+            border: none;
+        }
+        .prevArrow:focus{
+            border: none;
+        }
+        .prevArrow>img{
+            width: 4vmax;
+        }
+        .nextArrow{
+            right: 5px;
+        }
+        .nextArrow:active{
+            border: none;
+        }
+        .nextArrow:focus{
+            border: none;
+        }
+        .nextArrow>img{
+            width: 4vmax;
+        }
+        li{
+            background: transparent;
+        }
+        .s15{
+            font-weight: bolder;
+            color: #1273EB;
+        }
+    </style>
+    <div class="section">
+        <div class="center">
+            <div class="s15"><img style="width: 100%;" src="./images/switzerland.png"><p>Switzerland</p></div>
+            <div class="s15"><img style="width: 100%;" src="./images/sweden.png"><p>Sweden</p></div>
+            <div class="s15"><img style="width: 100%;" src="./images/Poland.png"><p>Poland</p></div>
+            <div class="s15"><img style="width: 100%;" src="./images/Norway.png"><p>Norway</p></div>
+            <div class="s15"><img style="width: 100%;" src="./images/Netherlands.png"><p>Netherlands</p></div>
+            <div class="s15"><img style="width: 100%;" src="./images/Greece .png"><p>Greece</p></div>
+            <div class="s15"><img style="width: 100%;" src="./images/Denmark.png"><p>Denmark</p></div>
+            <div class="s15"><img style="width: 100%;" src="./images/Belgium .png"><p>Belgium</p></div>
+        </div>
+        <div class="flagtable">
+            <div class="preferencetable" style="text-align: left;">
+                <h1>Filter</h1>
+                <input type="text" placeholder="eg. Microbiologist" >
+                <button class="formsecbtn">Search</button>
+                <hr>
+                <div>
+                    <h2>Broaden Your Search</h2>
+                    <p><b>Project Management:</b> 12</p>
+                    <p><b>Operations, Europe:</b> 47</p>
+                </div>
+                <h2>Refine Search</h2>
+                <form action="">
+                    <label>Location</label>
+                    <input type="text" placeholder="XYZ,Europe">
+                    <label>Salary Band</label>
+                    <input type="number" placeholder="1000euros per anum">
+                    <label>Position Type</label>
+                    <input type="text" placeholder="Executive">
+                    <label>Recruiter Typ</label>
+                    <input type="text" placeholder="Permanent">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div class="table">
+            <table style="width: 100%;">
+                <tbody>
+                <tr>
+                <th>Sl No.</th>
+                <th>Company Name</th>
+                <th>Skill Required</th>
+                <th>Location</th>
+                <th>Apply</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Things Go Social</td>
+                    <td>Node.js, REST API</td>
+                    <td>Work From Home</td>
+                    <td><button class="formsecbtn">Apply</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Things Go Social</td>
+                    <td>Node.js, MERN</td>
+                    <td>Work From Home</td>
+                    <td><button class="formsecbtn">Apply</button></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+        
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./slick/slick.min.js"></script>
+    <script>
+        $('.center').slick({
+  centerMode: true,
+  arrows: true,
+  centerPadding: '60px',
+  slidesToShow: 5,
+  prevArrow: '<button type=\'button\' class=\'prevArrow\'><img src="./images/back.svg"></button>',
+		nextArrow: '<button type=\'button\' class=\'nextArrow\'><img src="./images/next.svg"></button>',
+		dots: true,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3,
+        prevArrow: '<button type=\'button\' class=\'prevArrow\'><img src="./images/back.svg"></button>',
+		nextArrow: '<button type=\'button\' class=\'nextArrow\'><img src="./images/next.svg"></button>',
+		dots: true,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1,
+        prevArrow: '<button type=\'button\' class=\'prevArrow\'><img src="./images/back.svg"></button>',
+		nextArrow: '<button type=\'button\' class=\'nextArrow\'><img src="./images/next.svg"></button>',
+		dots: true,
+      }
+    }
+  ]
+});
+    </script>
+</body>
+</html>

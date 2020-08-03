@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login</title>
+    <link rel="stylesheet" href="css/Fontawesome.css">
+
+<style>
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: normal;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    background: #f8f8f8;
+    font-family: 'open sans',sans-serif;
+    font-weight: 400;
+    
+}
+::-webkit-input-placeholder
+{
+    color: #cbcbcb;
+}
+section
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color:#f8f8f8;
+}
+
+.container
+{ 
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    
+}
+section .container .logo
+{
+    position: relative;
+    margin-left: 69px;
+    top: 65px;
+    
+}
+section .container .logo 
+{
+    color:#1273EB;
+    font-size: 19px;
+    cursor: pointer;
+}
+section .container .logo i
+{
+    font-size: 22px;
+}
+section .container .logo:after{
+
+content: "";
+position: absolute;
+width: 40px;
+height: 40px;
+border-radius: 12px;
+top: -8px;
+left: -8px;
+box-shadow: inset -2px -2px 6px rgb(249, 249, 249),
+        inset 2px 2px 6px rgb(209, 209, 209);
+
+}
+
+.form
+{
+    top: 20vh;
+    position: relative;
+    width: 376px;
+    background: #f8f8f8;
+    left: 30vw;
+    border-radius: 12px;
+    text-align: center;
+     border: 3px solid #fff;
+    box-shadow: -5px -5px 10px rgb(255,255,255), 5px 5px 10px rgba(230, 225, 225, 0.96);
+    float: left;
+}
+section .form
+{
+    margin: 0;
+}
+.container .form h3
+{
+  margin-bottom: 13px;
+    color:#1273EB;
+    font-family: 'open sans',sans-serif;
+    font-size: 25px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    line-height: 70px;  
+}
+.container .form .social-box 
+{
+   margin-left: 2px;
+
+}
+.container .form .social-box a
+{
+     display: inline-block;
+    vertical-align: middle;
+    font-size: 25px;
+    width: 58px;
+    height: 58px;
+    background: #f8f8f8;
+    box-shadow: -5px -5px 10px rgb(255,255,255), 5px 5px 10px rgba(230, 225, 225, 0.96);
+
+    text-align: center;
+    line-height: 60px;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    border-radius: 18px;
+    margin: 0px 14px;
+    align-items: center;
+}
+.container .form .social-box a:hover
+{
+    transition: .2s;
+    box-shadow: inset -2px -2px 6px rgb(249, 249, 249),
+        inset 2px 2px 6px rgb(209, 209, 209);
+    
+}
+.container .form .social-box a .fab
+{
+    text-align: center;
+    align-items: center;
+    color:rgb(21, 0, 152);
+}
+.container .form p
+{
+    align-items: center;
+    text-align: center;
+    margin-top: 24px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    font-size: 17px;
+    line-height: 20px;
+    color: #616161;
+}
+.container .form .input .inputBox input
+{  
+    width: 80%;
+    height: 55px;
+    text-align: center;
+    background: #f8f8f8;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-size: 18px;
+    color: #1273EB;
+    box-shadow: inset -2px -2px 6px rgb(249, 249, 249),
+                inset 2px 2px 6px rgb(209, 209, 209);
+
+}
+.container .form .input
+{
+    text-align: center;
+    margin-top: 24px;
+}
+.container .form .input .inputBox
+{
+    margin-top: 20px;
+}
+.form .input .inputBox input[type="submit"] {
+    width: 55%;
+  margin-top: 10px;
+  background: linear-gradient(45deg, #1273EB, violet);
+  color: #f8f8f8;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  border-radius: 12px;
+  font-family: 'open sans',sans-serif;
+  font-weight: bold;
+    box-shadow:  -2px -2px 6px rgb(249, 249, 249),
+                 2px 2px 6px rgb(209, 209, 209);
+
+}
+.form .input .inputBox input[type="submit"]:hover {
+    color: #f8f8f8;
+    background: linear-gradient(45deg, #1064cc, violet);
+    margin-top: 10px;
+}
+.form .input .inputBox input[type="submit"]:active {
+    color: #f8f8f8;
+    background: linear-gradient(45deg, #1064cc, violet);
+    margin-top: 10px;
+        box-shadow: inset -5px -5px 10px rgb(255,255,255),
+                    inset 5px 5px 10px rgba(230, 225, 225, 0.96);
+}
+.container .form .login
+{
+  margin-bottom: 30px;
+  color: #000000;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+.login a {
+  text-decoration: none;
+  margin-left: 10px;
+  font-weight: bold;
+  font-family: 'open sans',sans-serif;
+  color: #1273EB;
+  font-size: 24px;
+}
+section .container .media-box
+{
+    display: block;
+    position:absolute;
+    top: 38rem;
+    left: 89px;
+    
+}
+.container .media-box .left-box 
+{
+    display: inline-block;
+    /*float: left;*/
+    position: relative;
+    display: -webkit-inline-box;
+}
+.media-box .left-box .btn2
+{
+    margin-left: 35px;
+  
+}
+.media-box .left-box .btn2 i
+{
+    position: relative;
+     display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    background: #f8f8f8;
+   box-shadow: -5px -5px 10px rgb(255,255,255), 5px 5px 10px rgba(230, 225, 225, 0.96);
+  text-align: center;
+  line-height: 50px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border-radius: 18px;
+  margin: 0px 14px;
+    top: -50px;
+    color: rgb(21, 0, 152);
+    border: 1px solid #fff;
+}
+.media-box .left-box .btn2 i:hover
+{
+    background:#220f9b;
+    color: #f1f1f1;
+    transition: 0.2s;
+}
+.media-box .left-box .btn2 span
+{
+    position: relative;
+     display: inline-block;
+    vertical-align: middle; 
+    font-size: 16px;
+    color: #ddd;
+    margin-top: -87px;
+}
+@media screen and (max-width: 1140px)
+{
+    .form
+    {    left: 35vw;
+        top: 15vh;
+    }
+
+}
+
+@media screen and (max-width: 768px)
+{
+    .form
+    {    left: 25vw;
+        top: 5vh;
+    }
+
+}
+
+@media screen and (max-width: 599px)
+{  
+
+    .form
+    {
+        left: 11vw;
+        top: 5vh;
+    }
+    
+}
+
+@media screen and (max-width: 451px)
+{  
+
+    .form
+    {
+        left: 5vw;
+        top: 5vh;
+    }
+    
+}
+
+@media only screen and (max-width: 414px)
+{
+    .form
+    {
+        left: 1vw;
+        top: 5vh;
+    }
+    
+
+
+}
+
+@media only screen and (max-width: 375px)
+{
+    
+
+    .form
+    {    left: -4vw;
+        top: 10vh;
+    }
+
+   
+}
+
+@media only screen and (max-width: 360px)
+{
+    
+
+    .form
+    {    left: -6vw;
+        top: 10vh;
+    }
+
+   
+}
+
+
+
+
+
+
+</style>
+
+</head>
+<body>
+
+  <section>
+        <div class="container">
+            
+          
+     <!--------- Form ----------->
+            <div class="form">
+                <h3>Create new account</h3>
+                <div class="social-box">
+                    <a class="dropdown-item" href="#">
+                        <img style="width: 50%; margin: auto; vertical-align: middle;" src="./images/gmail.svg" alt="" srcset="">
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <img style="width: 50%; margin: auto; vertical-align: middle;" src="./images/facebook.svg" alt="" srcset="">
+                    </a>
+                </div>
+                <p>or Sign Up with Email</p>
+
+                 <div class="input">
+                   <div class="inputBox">
+                     <input type="text" name="" placeholder="Email">
+                   </div>
+                   <div class="inputBox">
+                     <input type="password" name="" placeholder="Password">
+                   </div>
+                   <div class="inputBox">
+                     <input type="submit" name="" value="Sign In">
+                   </div>
+                 </div>
+
+                <p class="login">Already Have account?<a href="#">Login </a></p>
+            </div>
+    <!---------End Form ----------->
+
+        </div>
+  </section>
+</body>
+</html>
+
+
+
+
+<!----
+.container .form .input .inputBox input[type="submit"] {
+    width: 55%;
+  margin-top: 10px;
+  background: #1273EB;
+  color: #f8f8f8;
+    box-shadow:  -2px -2px 6px rgb(249, 249, 249),
+                 2px 2px 6px rgb(209, 209, 209);
+}
+
+.container .form .input .inputBox input[type="submit"]:hover
+{
+    color: #1273EB;
+    background: #f8f8f8;
+        box-shadow: -5px -5px 10px rgb(255,255,255), 5px 5px 10px rgba(230, 225, 225, 0.96);
+
+}*/---->
